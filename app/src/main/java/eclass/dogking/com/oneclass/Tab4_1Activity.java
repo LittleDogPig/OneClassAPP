@@ -19,6 +19,8 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -212,6 +214,7 @@ public class Tab4_1Activity extends AppCompatActivity {
                             //Toast.makeText(Tab4_1Activity.this,"接收成功", Toast.LENGTH_SHORT).show();
                             Glide.with(Tab4_1Activity.this).load(OneclassUtils.getBaseURL()+userHttpDefault.getData().getHeadimg())
                                     .centerCrop().fitCenter().error(R.mipmap.error).into(minehead);
+                            mine44.setText(refFormatNowDate(userHttpDefault.getData().getCreate_time()));
                             mine55.setText(userHttpDefault.getData().getDescription());
                         } else {
 
@@ -288,5 +291,11 @@ protected void onRestart(){
 
     }
 
+    public String refFormatNowDate(String time) {
+        Date nowTime = new Date(Long.parseLong(time));
+        SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd");
+        String retStrFormatNowDate = sdFormatter.format(nowTime);
 
+        return retStrFormatNowDate;
+    }
 }

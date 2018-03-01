@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/mine3"
             android:layout_marginTop="10dp"
-            android:text="已学"
+            android:text="建号"
             android:textSize="30dp"
             android:layout_alignLeft="@id/mine1"/>
 
