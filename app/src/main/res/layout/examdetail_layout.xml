@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+    <eclass.dogking.com.oneclass.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        Topbar:titleText=""
+        android:id="@+id/topBar" />
+
+    <RelativeLayout
+        android:id="@+id/userexercise_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/exam_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="考试名称"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/exercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="考试须知"
+        android:textColor="#CC0000"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:layout_below="@+id/topBar"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/exam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exercise1"
+        android:padding="5dp"
+        android:textSize="24sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:text="1.需要做完本门课所有练习才能参加考试\n2.考试必须本人完成，不可舞弊\n3.本门考试采用在线选择题的形式考察\n4.本门考试只有3分钟的作答时间，时间一到自动交卷，请考生自己把握好时间\n5.考完试代表本门课程完结，祝你考试成功！"/>
+
+
+    <Button
+        android:id="@+id/smmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="#7171C6"
+        android:textSize="24dp"
+        android:textColor="@android:color/white"
+        android:text="进入考试" />
+
+
+
+
+</RelativeLayout>
+
+

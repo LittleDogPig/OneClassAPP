@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+        <eclass.dogking.com.oneclass.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            Topbar:titleText=""
+            android:id="@+id/topBar" />
+
+
+        <RelativeLayout
+            android:id="@+id/userexercise_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/userexercise_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="练习名称"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/exercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:text="题目:"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:layout_below="@+id/topBar"
+         />
+
+    <TextView
+        android:id="@+id/userexercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exercise1"
+        android:layout_alignLeft="@id/exercise1"
+        android:textSize="24sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:text="已知太阳质量为X，地球半径为4，求小明此时吃的苹果的质量"/>
+
+
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+       android:layout_below="@+id/userexercise"
+        android:layout_gravity="end"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        >
+        <RadioButton
+            android:id="@+id/RB1"
+            android:text="正确"
+            android:textSize="24dp"
+            android:layout_marginLeft="50dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:checked="true"
+
+            />
+        <RadioButton
+            android:id="@+id/RB2"
+            android:text="错误"
+            android:textSize="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+
+            />
+    </RadioGroup>
+    <Button
+        android:id="@+id/smmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rgroup"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="#7171C6"
+        android:textSize="24dp"
+        android:textColor="@android:color/white"
+        android:text="提交" />
+
+
+
+
+    </RelativeLayout>
+
+

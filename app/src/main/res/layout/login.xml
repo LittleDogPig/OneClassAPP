@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#E6E6FA" >
+
+
+    <TextView
+        android:id="@+id/login_title"
+        android:text="一课通"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:textSize="42sp"
+
+        android:layout_gravity="bottom"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <EditText
+        android:textSize="18sp"
+        android:id="@+id/login_edit1"
+        android:hint="账号"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:maxLength="20"
+        android:paddingLeft="9dip"
+        android:singleLine="true"/>
+
+
+
+    <EditText android:textSize="18sp"
+        android:id="@+id/login_edit2"
+        android:hint="密码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_edit1"
+        android:inputType="textPassword"
+        android:paddingLeft="9dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:maxLength="20"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/login_edit2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="#7171C6"
+        android:textSize="24dp"
+        android:textColor="@android:color/white"
+        android:text="登录" />
+
+
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/login"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:text="注册"
+        android:textColor="#3366CC"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/login"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:text="重置"
+        android:textColor="#3366CC"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/administator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="系统维护管理"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="18dp"/>
+
+</RelativeLayout>

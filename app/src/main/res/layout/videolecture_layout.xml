@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:id="@+id/title_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <eclass.dogking.com.oneclass.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        Topbar:titleText=""
+        android:id="@+id/topBar" />
+    <RelativeLayout
+        android:id="@+id/video_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="视频课程"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/black">
+
+
+
+        <com.universalvideoview.UniversalVideoView
+
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:uvv_autoRotation="true"
+            app:uvv_fitXY="true" />
+
+
+        <com.universalvideoview.UniversalMediaController
+
+            android:id="@+id/mediaController"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:uvv_scalable="true" />
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center"
+            android:onClick="startClick"
+            android:text="开始播放"
+            android:textColor="@android:color/white" />
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="this is video introduction ......" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

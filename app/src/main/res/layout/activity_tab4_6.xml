@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto"
+    >
+    
+    <eclass.dogking.com.oneclass.TopBar
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+         
+        Topbar:titleText="留言板"  
+      
+    />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+    <Button
+        android:id="@+id/messagebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="留言"/>
+    
+</LinearLayout>

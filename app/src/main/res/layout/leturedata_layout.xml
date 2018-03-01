@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+        <eclass.dogking.com.oneclass.TopBar
+            android:id="@+id/lecture_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            Topbar:titleText="课程信息" />
+
+
+        <LinearLayout
+            android:id="@+id/lecturdata_linerlayou"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/lecture_title"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/lecturedata_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/actor" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lecturedata1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lecturdata_linerlayou"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:text="课名"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/lecturedata1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lecturdata_linerlayou"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/lecturedata1"
+            android:background="#d6dbf2"
+            android:text="演员的自我修养"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/lecturedata2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1"
+            android:layout_below="@id/lecturedata1"
+            android:layout_marginTop="10dp"
+            android:text="老师"
+            android:textSize="30dp" />
+
+
+        <TextView
+            android:id="@+id/lecturedata2_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/lecturedata1_1"
+            android:layout_below="@+id/lecturedata1"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#d6dbf2"
+            android:textColor="#3f51b5"
+            android:text="刘德华"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/lecturedata3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1"
+            android:layout_below="@id/lecturedata2"
+            android:layout_marginTop="10dp"
+            android:text="时间"
+            android:textSize="30dp" />
+
+
+        <TextView
+            android:id="@+id/lecturedata3_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1_1"
+            android:layout_below="@id/lecturedata2"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#d6dbf2"
+            android:text="周一 3-4节"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/lecturedata4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1"
+            android:layout_below="@id/lecturedata3"
+            android:layout_marginTop="10dp"
+            android:text="地点"
+            android:textSize="30dp" />
+
+
+        <TextView
+            android:id="@+id/lecturedata4_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1_1"
+            android:layout_below="@id/lecturedata3"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#d6dbf2"
+            android:text="在线"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/lecturedata5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1"
+            android:layout_below="@id/lecturedata4"
+            android:layout_marginTop="10dp"
+            android:text="环境"
+            android:textSize="30dp" />
+
+
+        <TextView
+            android:id="@+id/lecturedata5_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1_1"
+            android:layout_below="@id/lecturedata4"
+
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#d6dbf2"
+            android:text="80人课室\t投影1\t电脑1"
+            android:textSize="30dp" />
+
+
+
+        <TextView
+            android:id="@+id/lecturedata6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1"
+            android:layout_below="@id/lecturedata5_5"
+            android:layout_marginTop="10dp"
+            android:text="介绍"
+            android:textSize="30dp" />
+
+
+        <TextView
+            android:id="@+id/lecturedata6_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lecturedata1_1"
+            android:layout_below="@id/lecturedata5_5"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#d6dbf2"
+            android:text="教你如何成为一个真正的演员"
+            android:textSize="30dp" />
+
+
+    <Button
+        android:id="@+id/unchose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#CC0000"
+        android:text="退课"
+        android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+

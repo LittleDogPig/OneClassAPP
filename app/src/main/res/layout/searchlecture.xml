@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+    <eclass.dogking.com.oneclass.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        Topbar:titleText=""
+        android:id="@+id/topBar" />
+
+
+    <RelativeLayout
+        android:id="@+id/userexercise_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/exam_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="搜索课程"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/userexercise_title">
+
+        <ImageView
+            android:id="@+id/search_img"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/search"/>
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_toRightOf="@+id/search_img"
+            android:layout_marginTop="5dp"
+            android:textSize="22sp"
+            android:hint="找课程"
+            android:layout_weight="3"
+            android:paddingLeft="30dp"/>
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="搜索"/>
+
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_below="@+id/search_liner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+
+
+
+
+
+</RelativeLayout>
+
+

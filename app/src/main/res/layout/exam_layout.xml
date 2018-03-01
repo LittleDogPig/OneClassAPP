@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/userexercise_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3f51b5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/exam_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="考试名称"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tmelater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="剩余时间"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/userexercise_title"/>
+    <ScrollView
+        android:id="@+id/scroll_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tmelater"
+        android:scrollbars="none"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/test_course_rl"
+            >
+            <ImageView
+                android:id="@+id/exam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/exam"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="只需填写对应题目的ABCD答案"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:maxLength="5"
+                android:layout_below="@id/exam"/>
+
+            <Button
+                android:id="@+id/smmit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/answer"
+                android:layout_centerHorizontal="true"
+                android:background="#7171C6"
+                android:textSize="24dp"
+                android:textColor="@android:color/white"
+                android:text="提交" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>
+
+

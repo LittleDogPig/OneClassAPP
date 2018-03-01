@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <eclass.dogking.com.oneclass.TopBar
+            android:id="@+id/lecture_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            Topbar:titleText=""
+            />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    >
+    <TextView
+        android:id="@+id/lecture_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="课程名称"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        />
+
+</RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lecture_linerlayou"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/lecture_title"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/lecture_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/loading" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/lecture_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/lecture_linerlayou"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.5"
+            android:text="课程信息"/>
+
+        <Button
+            android:id="@+id/lecture_b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/lecture_linerlayou"
+            android:layout_alignBottom="@id/lecture_linerlayou"
+            android:layout_marginRight="5dp"
+            android:alpha="0.5"
+            android:text="选课"
+            android:layout_alignTop="@+id/lecture_b1" />
+
+
+        <TextView
+
+            android:id="@+id/lecture_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="介绍:"
+            android:textSize="24dp"
+           android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:layout_below="@id/lecture_linerlayou"/>
+
+        <TextView
+            android:id="@+id/lecture_decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这门课教成为一个真正的演员"
+            android:textSize="24dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBaseline="@+id/lecture_text"
+            android:layout_toRightOf="@id/lecture_text"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lecture_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+
+</LinearLayout>

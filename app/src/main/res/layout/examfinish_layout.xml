@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+    <eclass.dogking.com.oneclass.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        Topbar:titleText=""
+        android:id="@+id/topBar" />
+
+
+    <RelativeLayout
+        android:id="@+id/userexercise_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/userexercise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="考试完成情况"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/userexercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="演员的自我修养考试"
+        android:layout_below="@+id/topBar"
+        android:layout_alignStart="@+id/smmit" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/mine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态："
+        android:textSize="30dp"
+        android:layout_marginLeft="55dp"
+        android:layout_alignTop="@+id/mine1_1" />
+
+    <TextView
+        android:id="@+id/mine1_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d6dbf2"
+        android:textSize="30dp"
+        android:layout_below="@+id/userexercise"
+        android:text="已完成"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/mine1"/>
+
+    <TextView
+        android:id="@+id/mine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mine1"
+        android:layout_marginTop="30dp"
+        android:text="得分："
+        android:textSize="30dp"
+        android:layout_alignLeft="@id/mine1"/>
+
+
+    <TextView
+        android:id="@+id/mine2_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d6dbf2"
+        android:textSize="30dp"
+        android:text="100"
+        android:layout_below="@id/mine1_1"
+        android:layout_alignTop="@+id/mine2"
+        android:layout_marginRight="40dp"
+        android:layout_alignLeft="@+id/mine1_1"/>
+
+    <Button
+        android:id="@+id/smmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/mine2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="#7171C6"
+        android:textSize="24dp"
+        android:textColor="@android:color/white"
+        android:text="查看考试原题" />
+
+    <ScrollView
+        android:id="@+id/scroll_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smmit"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none"
+        >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test_course_rl"
+        >
+        <ImageView
+            android:id="@+id/examimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/exam"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/realanswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="答案"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/examimg"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>
+
+
