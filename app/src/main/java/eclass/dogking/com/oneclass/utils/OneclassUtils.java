@@ -24,8 +24,8 @@ public class OneclassUtils {
     private static Cache cache;
 
     //private static final String IP = "192.168.23.1";//工厂
-     //private static final String IP = "192.168.0.101";//郦城
-      private static final String IP = "192.168.1.101";//怀德
+     private static final String IP = "192.168.0.101";//郦城
+      //private static final String IP = "192.168.1.101";//怀德
 
     private static final String BASEURL = "http://" + IP + ":8080/";
 
@@ -63,11 +63,11 @@ public class OneclassUtils {
                             .cache(cache)
 //                            .addNetworkInterceptor(new CacheInterceptor())
                             .retryOnConnectionFailure(true)
-                            .connectTimeout(30, TimeUnit.SECONDS)
-                            .writeTimeout(30, TimeUnit.SECONDS)
-                            .readTimeout(20, TimeUnit.SECONDS)
+                            .connectTimeout(10, TimeUnit.SECONDS)
+                            .writeTimeout(10, TimeUnit.SECONDS)
+                            .readTimeout(10, TimeUnit.SECONDS)
                             .build();
-                    Log.d("weijie", "initOkHttpClient成功: ");
+                    Log.d("tag:", "initOkHttpClient成功: ");
                 }
             }
         }

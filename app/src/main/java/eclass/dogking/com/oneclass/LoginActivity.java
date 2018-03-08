@@ -11,19 +11,14 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import eclass.dogking.com.oneclass.API.UserAPI;
-import eclass.dogking.com.oneclass.AdminActivity;
-
-
 import eclass.dogking.com.oneclass.Database.UserService;
 import eclass.dogking.com.oneclass.entiry.HttpDefault;
 import eclass.dogking.com.oneclass.entiry.User;
@@ -49,6 +44,9 @@ public class LoginActivity extends AppCompatActivity {
     TextView reset;
     @BindView(R.id.administator)
     TextView administator;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+
 
     private UserService uService;
     private long exitTime;
@@ -57,35 +55,33 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedlnstanceState);
         setContentView(R.layout.login);
         ButterKnife.bind(this);
-
     }
 
 
+    @OnClick({R.id.login, R.id.sign, R.id.reset, R.id.administator})
+    public void onClick(View v) {
+        String tel = loginEdit1.getText().toString();
+        String password = loginEdit2.getText().toString();
 
-    @OnClick({R.id.login,R.id.sign,R.id.reset,R.id.administator})
-        public void onClick(View v){
-            String tel=loginEdit1.getText().toString();
-            String password=loginEdit2.getText().toString();
 
-
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.login:
-                Log.e("tag===============","test");
-                if (!"".equals(tel) && !"".equals(password))
-                {
-                    User u1=new User();
+                Log.e("tag===============", "test");
+                if (!"".equals(tel) && !"".equals(password)) {
+                    User u1 = new User();
                     u1.setTel(tel);
                     u1.setPassword(password);
+                    progressBar.setVisibility(View.VISIBLE);
                     Login(u1);
 
 
+                } else {
+                    Toast.makeText(LoginActivity.this, "请输入账号密码", Toast.LENGTH_SHORT).show();
                 }
-
-                else{Toast.makeText(LoginActivity.this, "请输入账号密码", Toast.LENGTH_SHORT).show();}
                 break;
             case R.id.sign:
-                Intent intent=new Intent(LoginActivity.this,SignActivity.class);	//创建要显示Activity对应的Intent对象
-                startActivity(intent);	//开启一个新的Activity
+                Intent intent = new Intent(LoginActivity.this, SignActivity.class);    //创建要显示Activity对应的Intent对象
+                startActivity(intent);    //开启一个新的Activity
                 break;
             case R.id.reset:
                 loginEdit1.setText("");
@@ -110,11 +106,11 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String content = editText.getText().toString();
-                                if(content.equals("dogking")){
-                                    Intent intent=new Intent(LoginActivity.this,AdminActivity.class);	//创建要显示Activity对应的Intent对象
-                                    startActivity(intent);	//开启一个新的Activity
-                                }
-                                else  Toast.makeText(LoginActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
+                                if (content.equals("dogking")) {
+                                    Intent intent = new Intent(LoginActivity.this, AdminActivity.class);    //创建要显示Activity对应的Intent对象
+                                    startActivity(intent);    //开启一个新的Activity
+                                } else
+                                    Toast.makeText(LoginActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
 
                                 dialog.dismiss();
                             }
@@ -130,6 +126,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
+
     //登陆事件
     private void Login(User user) {
 
@@ -148,20 +145,24 @@ public class LoginActivity extends AppCompatActivity {
                     public void onNext(@NonNull HttpDefault<User> userHttpDefault) {
 
                         if (userHttpDefault.getError_code() == -1) {
-                            Toast.makeText(LoginActivity.this,userHttpDefault.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, userHttpDefault.getMessage(), Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.INVISIBLE);
                         } else if (userHttpDefault.getError_code() == 0) {
 
                             User user = userHttpDefault.getData();
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            intent.putExtra("tel",user.getTel());
+                            intent.putExtra("tel", user.getTel());
                             startActivity(intent);
                             LoginActivity.this.finish();
                         }
+
+
                     }
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-                        Toast.makeText(LoginActivity.this,"服务器出问题了", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.INVISIBLE);
+                        Toast.makeText(LoginActivity.this, "服务器出问题了", Toast.LENGTH_SHORT).show();
                         Log.e("tag:", e.getMessage());
                     }
 
@@ -176,18 +177,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN)
-        {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
 
-            if((System.currentTimeMillis()-exitTime) > 2000)  //System.currentTimeMillis()无论何时调用，肯定大于2000
+            if ((System.currentTimeMillis() - exitTime) > 2000)  //System.currentTimeMillis()无论何时调用，肯定大于2000
             {
-                Toast.makeText(getApplicationContext(), "再按一次退出程序",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
                 exitTime = System.currentTimeMillis();
-            }
-            else
-            {
+            } else {
                 finish();
                 System.exit(0);
             }

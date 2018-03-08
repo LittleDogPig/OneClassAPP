@@ -3,7 +3,6 @@ package eclass.dogking.com.oneclass;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -14,24 +13,19 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.arialyy.aria.core.Aria;
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;
-import com.yanzhenjie.permission.Action;
-import com.yanzhenjie.permission.AndPermission;
-import com.yanzhenjie.permission.Permission;
 
 import java.io.File;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import eclass.dogking.com.oneclass.API.PptAPI;
-import eclass.dogking.com.oneclass.Adapter.LeftAdapter;
 import eclass.dogking.com.oneclass.Adapter.PPtAdapter;
 import eclass.dogking.com.oneclass.Adapter.RvListener;
 import eclass.dogking.com.oneclass.entiry.HttpDefault;
@@ -48,12 +42,13 @@ public class Tab4_2Activity extends Activity {
 
     @BindView(R.id.rv)
     RecyclerView rv;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
     private String tel;
     private PPtAdapter mrvAdapter;
     private List<PptShow> list;
     private LinearLayoutManager mLinearLayoutManager;
     private AlertDialog dialog;
-
 
 
     @Override
@@ -70,17 +65,17 @@ public class Tab4_2Activity extends Activity {
         pptshow();
     }
 
-    protected void initRv(){
+    protected void initRv() {
 
         mrvAdapter = new PPtAdapter(this, list, new RvListener() {
             @Override
             public void onItemClick(int id, int position) {
                 File file = new File(Environment.getExternalStorageDirectory().getPath()
                         + "/download/" + list.get(position).getFilename());
-                if (!file.exists()){
+                if (!file.exists()) {
                     createdialog(position);
-                    dialog.show();}
-                else exist(position);
+                    dialog.show();
+                } else exist(position);
                 //Toast.makeText(Tab4_2Activity.this,list.get(position).getName(),Toast.LENGTH_SHORT).show();
 
             }
@@ -132,12 +127,13 @@ public class Tab4_2Activity extends Activity {
 
 
     }
-    protected void exist(int position){
+
+    protected void exist(int position) {
         Tab4_2Activity.this.startActivity(OpenFileUtil.openFile(Environment.getExternalStorageDirectory().getPath()
                 + "/download/" + list.get(position).getFilename()));
     }
 
-    protected void unexist(int position){
+    protected void unexist(int position) {
         FileDownloader.setup(Tab4_2Activity.this);
         FileDownloader.getImpl().create(OneclassUtils.getBaseURL() + list.get(position).getUrl())
                 .setPath(Environment.getExternalStorageDirectory().getPath() + "/download/" + list.get(position).getFilename())
@@ -169,6 +165,8 @@ public class Tab4_2Activity extends Activity {
 
                     @Override
                     protected void completed(BaseDownloadTask task) {
+                        Toast.makeText(Tab4_2Activity.this, "下载完成", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.INVISIBLE);
                         Log.e("tag", "completed");
                     }
 
@@ -188,7 +186,8 @@ public class Tab4_2Activity extends Activity {
                     }
                 }).start();
     }
-    private void  createdialog(final int position) {
+
+    private void createdialog(final int position) {
         dialog = new AlertDialog.Builder(this)
                 .setTitle("下载课件")//设置对话框的标题
                 .setMessage("你没下载此课件，需要下载吗？")//设置对话框的内容
@@ -202,6 +201,7 @@ public class Tab4_2Activity extends Activity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        progressBar.setVisibility(View.VISIBLE);
                         unexist(position);
                         dialog.dismiss();
                     }
