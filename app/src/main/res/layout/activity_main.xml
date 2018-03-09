@@ -27,32 +27,30 @@
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.DrawerLayout
-    android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    android:orientation="vertical">
-
-
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/id_viewpager"
-        android:layout_weight="1"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent">
 
 
-    <include layout="@layout/bottombar"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-</LinearLayout>
+            android:orientation="vertical">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </android.support.v4.view.ViewPager>
+
+
+            <include layout="@layout/bottombar" />
+
+        </LinearLayout>
 
         <android.support.design.widget.NavigationView
             android:id="@+id/nav_view"
@@ -61,8 +59,8 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
             app:headerLayout="@layout/nav_head_layout"
-            app:menu="@menu/nav_menu_layout"/>
+            app:menu="@menu/nav_menu_layout" />
 
 
-</android.support.v4.widget.DrawerLayout>
+    </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

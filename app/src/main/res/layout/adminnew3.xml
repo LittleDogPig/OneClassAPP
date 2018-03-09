@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6FA"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto">
+
+    <eclass.dogking.com.oneclass.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        Topbar:titleText=""
+        android:id="@+id/topBar" />
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/exam_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="新增课程"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <EditText
+
+        android:textSize="18sp"
+        android:id="@+id/edit1"
+        android:hint="名字"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="19dp"
+
+        android:maxLength="6"
+        android:maxLines="1"
+        android:layout_below="@+id/title" />
+
+
+
+    <EditText
+
+        android:textSize="18sp"
+        android:id="@+id/edit2"
+        android:hint="账号"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="19dp"
+
+        android:maxLines="1"
+        android:layout_below="@+id/edit1"
+        />
+
+    <EditText
+
+        android:textSize="18sp"
+        android:id="@+id/edit3"
+        android:hint="密码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="19dp"
+
+        android:maxLines="1"
+        android:layout_below="@+id/edit2"
+        />
+
+    <EditText
+
+        android:textSize="18sp"
+        android:id="@+id/edit4"
+        android:hint="性别"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="19dp"
+
+        android:maxLines="1"
+        android:layout_below="@+id/edit3"
+        />
+
+
+
+    <EditText
+        android:textSize="18sp"
+        android:id="@+id/edit5"
+        android:hint="简介"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edit4"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:maxLength="50"
+        android:maxLines="6"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="5dp"
+        >
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/udbutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#7171C6"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentLeft="true"
+
+
+            android:text="完成" />
+
+
+        <Button
+            android:id="@+id/udbutton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+
+            android:layout_weight="1"
+            android:background="#7171C6"
+            android:text="返回"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

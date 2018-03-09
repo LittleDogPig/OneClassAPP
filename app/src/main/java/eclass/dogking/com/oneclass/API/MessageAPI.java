@@ -27,4 +27,11 @@ public interface MessageAPI {
             @Field("description") String description
     );
 
+    @FormUrlEncoded
+    @POST("message/deletetmessage")
+    Observable<HttpDefault<String>> deletetmessage(
+            @Field("id") int id
+
+    );
+
 }

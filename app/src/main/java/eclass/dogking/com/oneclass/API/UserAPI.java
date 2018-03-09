@@ -69,6 +69,14 @@ public interface UserAPI {
     @GET("user/userlist")
     Observable<HttpDefault<List<User>>> userlist();
 
+    @GET("user/getuser")
+    Observable<HttpDefault<List<User>>> getuser(
+            @Query("tel") String tel
+
+    );
+
+
+
     //设置用户头像
     @Multipart
     @POST("file/upload")

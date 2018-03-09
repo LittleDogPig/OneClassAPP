@@ -22,4 +22,19 @@ public interface PptAPI {
             @Field("tel") String tel
     );
 
+    @FormUrlEncoded
+    @POST("ppt/deletePPT")
+    Observable<HttpDefault<String>> deletePPT(
+            @Field("id") int id
+    );
+
+    @POST("ppt/pptlistShow")
+    Observable<HttpDefault<List<PptShow>>> pptlistShow();
+
+    @FormUrlEncoded
+    @POST("ppt/getPPT")
+    Observable<HttpDefault<List<PptShow>>> getPPT(
+            @Field("name") String name
+    );
+
 }

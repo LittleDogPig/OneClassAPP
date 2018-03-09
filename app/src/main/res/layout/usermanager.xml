@@ -51,7 +51,7 @@
             android:layout_toRightOf="@+id/name"
             android:layout_alignTop="@+id/minehead"
             android:layout_marginTop="5dp"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:text="18576820829"
             android:layout_marginLeft="20dp"
             />

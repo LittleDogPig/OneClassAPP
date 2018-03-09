@@ -203,7 +203,7 @@ public class Fragment3 extends Fragment {
         activity = (MainActivity) getActivity();
         context = getContext();
         DisplayMetrics dm = new DisplayMetrics();
-        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);//获取屏幕信息
         //屏幕宽度
         int width = dm.widthPixels;
         //平均宽度

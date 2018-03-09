@@ -48,4 +48,16 @@ public interface LectureAPI {
     Observable<HttpDefault<List<String>>> getlecturedata(
             @Field("name") String name
     );
+
+    @FormUrlEncoded
+    @POST("lecture/deletelecture")
+    Observable<HttpDefault<String>> deletelecture(
+            @Field("name") String name
+    );
+
+    @FormUrlEncoded
+    @POST("lecture/getLecture")
+    Observable<HttpDefault<List<LectureShow>>> getLecture(
+            @Field("name") String name
+    );
 }

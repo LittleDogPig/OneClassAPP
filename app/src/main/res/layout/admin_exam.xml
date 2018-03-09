@@ -20,18 +20,18 @@
         android:layout_gravity="center"
         />
 
-    <TextView
-        android:id="@+id/userexercise_finish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="#cc0000"
+        android:text="删除"
+        android:textSize="18dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
         android:layout_centerVertical="true"
-        android:layout_marginRight="10dp"
-        android:text="未完成"
-        android:textSize="24dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
-
+        android:layout_alignParentEnd="true" />
 
 
 

@@ -9,6 +9,8 @@ import java.io.Serializable;
  */
 
 public class MessageShow implements Serializable {
+    @SerializedName("id")
+    int id;
     @SerializedName("headimg")
     String headimg;
     @SerializedName("name")
@@ -19,6 +21,14 @@ public class MessageShow implements Serializable {
     String message;
     @SerializedName("time")
     String time;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getHeadimg() {
         return headimg;

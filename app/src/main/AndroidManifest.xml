@@ -138,6 +138,84 @@
             android:name=".ExamdetailActivity"
             android:label="ExamdetailActivity" >
         </activity>
+
+        <activity
+            android:name=".AdminSearch"
+            android:label="AdminSearch" >
+        </activity>
+
+        <activity
+            android:name=".AdminSearch2"
+            android:label="AdminSearch2" >
+        </activity>
+
+        <activity
+            android:name=".AdminSearch3"
+            android:label="AdminSearch3" >
+        </activity>
+
+        <activity
+            android:name=".AdminSearch4"
+            android:label="AdminSearch4" >
+        </activity>
+
+        <activity
+            android:name=".AdminSearch5"
+            android:label="AdminSearch5" >
+        </activity>
+
+        <activity
+            android:name=".AdminSearch6"
+            android:label="AdminSearch6" >
+        </activity>
+
+        <activity
+            android:name=".AdminExercise"
+            android:label="AdminExercise" >
+        </activity>
+
+        <activity
+            android:name=".AdminUpdata1"
+            android:label="AdminUpdata1" >
+        </activity>
+        <activity
+            android:name=".AdminUpdata2"
+            android:label="AdminUpdata2" >
+        </activity>
+        <activity
+            android:name=".AdminUpdata3"
+            android:label="AdminUpdata3" >
+        </activity>
+        <activity
+            android:name=".AdminUpdata4"
+            android:label="AdminUpdata4" >
+        </activity>
+        <activity
+            android:name=".AdminUpdata5"
+            android:label="AdminUpdata5" >
+        </activity>AdminNew
+
+        <activity
+            android:name=".AdminNew2"
+            android:label="AdminNew2" >
+        </activity>
+        <activity
+            android:name=".AdminNew3"
+            android:label="AdminNew3" >
+        </activity>
+        <activity
+            android:name=".AdminNew4"
+            android:label="AdminNew4" >
+        </activity>
+        <activity
+            android:name=".AdminNew5"
+            android:label="AdminNew5" >
+        </activity>
+        <activity
+            android:name=".AdminNew6"
+            android:label="AdminNew6" >
+        </activity>
+
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package eclass.dogking.com.oneclass.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,11 @@ import java.util.Date;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import eclass.dogking.com.oneclass.AdminExercise;
+import eclass.dogking.com.oneclass.AdminUpdata1;
 import eclass.dogking.com.oneclass.R;
 import eclass.dogking.com.oneclass.Tab4_1Activity;
+import eclass.dogking.com.oneclass.entiry.ExerciseShow;
 import eclass.dogking.com.oneclass.entiry.PptShow;
 import eclass.dogking.com.oneclass.entiry.User;
 import eclass.dogking.com.oneclass.utils.OneclassUtils;
@@ -56,6 +60,18 @@ public class ManageAdapter  extends RecyclerView.Adapter<ManageAdapter.ViewHolde
         viewHolder.t3.setText(list.get(position).getTel());
         viewHolder.t4.setText(refFormatNowDate(list.get(position).getCreate_time()));
 
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int position = viewHolder.getAdapterPosition();
+                //ExerciseShow exerciseShow=ExerciseShows.get(position);
+                Intent intent=new Intent(v.getContext(),AdminUpdata1.class);
+                //intent.putExtra("name",exerciseShow.getName());//传递课程
+                v.getContext().startActivity(intent);
+
+                //Toast.makeText(v.getContext(),"你点击的课为："+lectureShow1.getLectureName(),Toast.LENGTH_SHORT).show();
+            }
+
+        });
 
     }
 

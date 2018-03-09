@@ -24,7 +24,7 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="3dp"
             android:gravity="center"
-            android:text="搜索课程"
+            android:text="搜索课件"
             android:textColor="#ffffff"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -38,15 +38,6 @@
         android:orientation="horizontal"
         android:layout_below="@+id/userexercise_title">
 
-        <ImageView
-            android:id="@+id/search_img"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:src="@mipmap/search"/>
         <EditText
             android:id="@+id/search_text"
             android:layout_width="0dp"
@@ -55,7 +46,7 @@
             android:layout_toRightOf="@+id/search_img"
             android:layout_marginTop="5dp"
             android:textSize="22sp"
-            android:hint="找课程"
+            android:hint="课程名"
             android:layout_weight="3"
             android:paddingLeft="30dp"/>
         <Button
@@ -75,8 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/search_liner" />
 
 
 
@@ -84,5 +74,4 @@
 
 
 </RelativeLayout>
-
 

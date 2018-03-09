@@ -1,7 +1,10 @@
 package eclass.dogking.com.oneclass.API;
 
+import java.util.List;
+
 import eclass.dogking.com.oneclass.entiry.HttpDefault;
 import eclass.dogking.com.oneclass.entiry.Teacher;
+import eclass.dogking.com.oneclass.entiry.User;
 import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -20,5 +23,19 @@ public interface TeacherAPI {
             @Field("name") String name
     );
 
+    @GET("teacher/teacherlist")
+    Observable<HttpDefault<List<Teacher>>> teacherlist();
+
+    @FormUrlEncoded
+    @POST("teacher/getTeacher")
+    Observable<HttpDefault<List<Teacher>>> getTeacher(
+            @Field("name") String name
+    );
+
+    //删除用户
+    @POST("teacher/deleteteacher")
+    Observable<HttpDefault<String>> deleteteacher(
+            @Query("id") int id
+    );
 
 }

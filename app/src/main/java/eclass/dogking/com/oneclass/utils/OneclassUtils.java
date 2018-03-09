@@ -23,8 +23,9 @@ public class OneclassUtils {
     private static OkHttpClient mOkHttpClient;
     private static Cache cache;
 
-    //private static final String IP = "192.168.23.1";//工厂
-     private static final String IP = "192.168.0.101";//郦城
+    //private static final String IP = "192.168.23.1";//学校
+    private static final String IP = "172.16.162.71";//学校
+     //private static final String IP = "192.168.0.101";//郦城
       //private static final String IP = "192.168.1.101";//怀德
 
     private static final String BASEURL = "http://" + IP + ":8080/";
