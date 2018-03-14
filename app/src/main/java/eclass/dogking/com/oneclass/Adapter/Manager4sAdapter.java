@@ -56,9 +56,9 @@ public class Manager4sAdapter extends RecyclerView.Adapter<Manager4sAdapter.View
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 int position = viewHolder.getAdapterPosition();
-                //ExerciseShow exerciseShow=ExerciseShows.get(position);
+                Exercise exercise=list.get(position);
                 Intent intent=new Intent(v.getContext(),AdminUpdata4.class);
-                //intent.putExtra("name",exerciseShow.getName());//传递课程
+                intent.putExtra("Lid",exercise.getId()+"");//传递课程
                 v.getContext().startActivity(intent);
 
                 //Toast.makeText(v.getContext(),"你点击的课为："+lectureShow1.getLectureName(),Toast.LENGTH_SHORT).show();

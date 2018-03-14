@@ -49,4 +49,10 @@ public interface ExerciseAPI {
 
     );
 
+    @FormUrlEncoded
+    @POST("exercise/getoneexercise")
+    Observable<HttpDefault<Exercise>> getoneexercise(
+            @Field("id") int id
+    );
+
 }

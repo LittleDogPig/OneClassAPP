@@ -38,4 +38,32 @@ public interface TeacherAPI {
             @Query("id") int id
     );
 
+    @FormUrlEncoded
+    @POST("teacher/newteacher")
+    Observable<HttpDefault<Teacher>> newteacher(
+            @Field("name") String name,
+            @Field("email") String email,
+            @Field("school") String school,
+            @Field("sex") String sex,
+            @Field("description") String description
+    );
+
+    @FormUrlEncoded
+    @POST("teacher/udteacher")
+    Observable<HttpDefault<Teacher>> udteacher(
+            @Field("id") int id,
+            @Field("name") String name,
+            @Field("email") String email,
+            @Field("school") String school,
+            @Field("sex") String sex,
+            @Field("description") String description
+    );
+
+    @POST("teacher/findTeacher")
+    Observable<HttpDefault<Teacher>> findTeacher(
+            @Query("id") int id
+    );
+
+
+
 }

@@ -32,6 +32,10 @@
 
     </RelativeLayout>
 
+
+
+
+
     <EditText
 
         android:textSize="18sp"
@@ -142,7 +146,7 @@
             android:layout_alignParentLeft="true"
 
 
-            android:text="完成" />
+            android:text="修改" />
 
 
         <Button

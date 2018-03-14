@@ -3,6 +3,7 @@ package eclass.dogking.com.oneclass.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,9 +65,9 @@ import eclass.dogking.com.oneclass.utils.OneclassUtils;
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     int position = viewHolder.getAdapterPosition();
-                    //ExerciseShow exerciseShow=ExerciseShows.get(position);
+                   Teacher teacher=list.get(position);
                     Intent intent=new Intent(v.getContext(),AdminUpdata2.class);
-                    //intent.putExtra("name",exerciseShow.getName());//传递课程
+                    intent.putExtra("Lid",teacher.getId()+"");//传递课程
                     v.getContext().startActivity(intent);
 
                     //Toast.makeText(v.getContext(),"你点击的课为："+lectureShow1.getLectureName(),Toast.LENGTH_SHORT).show();

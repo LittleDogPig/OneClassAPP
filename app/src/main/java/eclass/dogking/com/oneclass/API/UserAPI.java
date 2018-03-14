@@ -91,4 +91,17 @@ public interface UserAPI {
     );
 
 
+    //更新个人信息
+    @FormUrlEncoded
+    @POST("user/updateUser")
+    Observable<HttpDefault<User>> updatUser(
+            @Field("id") int id,
+            @Field("name") String name,
+            @Field("tel") String tel,
+            @Field("password") String password,
+            @Field("sex") String sex,
+            @Field("description") String description
+
+    );
+
 }

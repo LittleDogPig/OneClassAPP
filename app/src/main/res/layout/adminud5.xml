@@ -64,35 +64,6 @@
         android:layout_below="@+id/edit1"
         />
 
-    <EditText
-
-        android:textSize="18sp"
-        android:id="@+id/edit3"
-        android:hint="密码"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="19dp"
-
-        android:maxLines="1"
-        android:layout_below="@+id/edit2"
-        />
-
-    <EditText
-
-        android:textSize="18sp"
-        android:id="@+id/edit4"
-        android:hint="性别"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="19dp"
-
-        android:maxLines="1"
-        android:layout_below="@+id/edit3"
-        />
 
 
 
@@ -103,11 +74,11 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/edit4"
+        android:layout_below="@id/edit2"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="200dp"
         android:maxLength="50"
         android:maxLines="6"/>
 

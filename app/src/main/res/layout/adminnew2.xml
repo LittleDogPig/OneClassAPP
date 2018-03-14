@@ -32,6 +32,7 @@
 
     </RelativeLayout>
 
+
     <EditText
 
         android:textSize="18sp"
@@ -53,7 +54,7 @@
 
         android:textSize="18sp"
         android:id="@+id/edit2"
-        android:hint="账号"
+        android:hint="邮箱"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
@@ -68,7 +69,7 @@
 
         android:textSize="18sp"
         android:id="@+id/edit3"
-        android:hint="密码"
+        android:hint="学历"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"

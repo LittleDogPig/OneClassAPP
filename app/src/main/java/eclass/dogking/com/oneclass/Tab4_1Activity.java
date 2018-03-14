@@ -151,6 +151,7 @@ public class Tab4_1Activity extends AppCompatActivity {
                         ImageLoader.getInstance().displayImage("file:/" + photoInfo.getPhotoPath(), minehead, options);
                         file_result = new File(photoInfo.getPhotoPath());
                         uploadFile(tel, file_result, "file");
+                        receive(tel);
                     }
 
                     @Override
@@ -173,6 +174,7 @@ public class Tab4_1Activity extends AppCompatActivity {
 
                         file_result = new File(photoInfo.getPhotoPath());
                         uploadFile(tel, file_result, "file");
+                        receive(tel);
                     }
 
                     @Override
@@ -279,12 +281,6 @@ public class Tab4_1Activity extends AppCompatActivity {
         return true;
     }
 
-
-protected void onRestart(){
-    receive(tel);
-    super.onRestart();
-
-}
     private void initdata(){
        minehead=(CircleImageView)findViewById(R.id.minehead);
 

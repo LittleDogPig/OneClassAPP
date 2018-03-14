@@ -57,6 +57,7 @@ public class Manager4Adapter extends RecyclerView.Adapter<Manager4Adapter.ViewHo
                ExerciseShow exerciseShow=ExerciseShows.get(position);
                 Intent intent=new Intent(v.getContext(),AdminExercise.class);
                 intent.putExtra("name",exerciseShow.getName());//传递课程
+                intent.putExtra("Lid",exerciseShow.getId()+"");
                 v.getContext().startActivity(intent);
 
                 //Toast.makeText(v.getContext(),"你点击的课为："+lectureShow1.getLectureName(),Toast.LENGTH_SHORT).show();

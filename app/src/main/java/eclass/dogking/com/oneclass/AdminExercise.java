@@ -45,6 +45,8 @@ public class AdminExercise extends AppCompatActivity {
     private Manager4sAdapter mrvAdapter;
     private List<Exercise> list;
     private AlertDialog dialog;
+    private String Lid;
+    private int id;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +58,10 @@ public class AdminExercise extends AppCompatActivity {
         //取得课程名称
         if (intent != null) {
             name = intent.getStringExtra("name");
+            Lid=intent.getStringExtra("Lid");
         }
-        Log.e("name:",name);
+
+        id=Integer.parseInt(Lid);
         getExamList();
 
     }

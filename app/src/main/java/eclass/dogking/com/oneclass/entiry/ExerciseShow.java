@@ -12,6 +12,16 @@ public class ExerciseShow implements Serializable {
     String name;
     @SerializedName("number")
     String number;
+    @SerializedName("id")
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setName(String name) {
         this.name = name;

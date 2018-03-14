@@ -31,12 +31,25 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+    <EditText
+        android:textSize="18sp"
+        android:id="@+id/edit1"
+        android:hint="问题"
 
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:maxLength="50"
+        android:maxLines="6"/>
     <EditText
 
         android:textSize="18sp"
-        android:id="@+id/edit1"
-        android:hint="名字"
+        android:id="@+id/edit2"
+        android:hint="答案"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
@@ -45,71 +58,14 @@
 
         android:maxLength="6"
         android:maxLines="1"
-        android:layout_below="@+id/title" />
+        android:layout_below="@+id/edit1" />
 
 
 
-    <EditText
-
-        android:textSize="18sp"
-        android:id="@+id/edit2"
-        android:hint="账号"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="19dp"
-
-        android:maxLines="1"
-        android:layout_below="@+id/edit1"
-        />
-
-    <EditText
-
-        android:textSize="18sp"
-        android:id="@+id/edit3"
-        android:hint="密码"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="19dp"
-
-        android:maxLines="1"
-        android:layout_below="@+id/edit2"
-        />
-
-    <EditText
-
-        android:textSize="18sp"
-        android:id="@+id/edit4"
-        android:hint="性别"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="19dp"
-
-        android:maxLines="1"
-        android:layout_below="@+id/edit3"
-        />
 
 
 
-    <EditText
-        android:textSize="18sp"
-        android:id="@+id/edit5"
-        android:hint="简介"
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/edit4"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
-        android:maxLength="50"
-        android:maxLines="6"/>
 
 
 
@@ -142,7 +98,7 @@
             android:layout_alignParentLeft="true"
 
 
-            android:text="完成" />
+            android:text="修改" />
 
 
         <Button

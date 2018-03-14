@@ -62,9 +62,9 @@ public class Fragment1 extends Fragment {
         ButterKnife.bind(this, view);
         mBanner = (CustomBanner)view.findViewById(R.id.banner);
         ArrayList<String> images = new ArrayList<>();
-        images.add(OneclassUtils.getBaseURL()+"file/download?filename=ad1.png&type=0");
-        images.add(OneclassUtils.getBaseURL()+"file/download?filename=ad2.png&type=0");
-        images.add(OneclassUtils.getBaseURL()+"file/download?filename=ad3.png&type=0");
+        images.add(OneclassUtils.getBaseURL()+"file/download?filename=ad6.png&type=0");
+        images.add(OneclassUtils.getBaseURL()+"file/download?filename=ad4.png&type=0");
+        images.add(OneclassUtils.getBaseURL()+"file/download?filename=ad5.png&type=0");
         setBean(images);
         getLectureShow();
 
